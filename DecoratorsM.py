@@ -4,14 +4,21 @@
 #get_icecream("vanilla")
 
 def add_spinkles(func):
-    def wrapper():
+    def wrapper(*args, **kwargs): #to accept any number of arguments and keyword arguments
         print("adding sprinkles")
-        func()
+        func(*args, **kwargs)
+    return wrapper
+
+def add_chocolate(func):
+    def wrapper(*args, **kwargs): #to not call the function directly
+        print("adding chocolate")
+        func(*args, **kwargs)
     return wrapper
 
 #to apply a decorator to a function, use the @ symbol followed by the decorator name before the function definition.
 @add_spinkles
-def get_icecream():
-    print("here is your ice cream")
+@add_chocolate
+def get_icecream(flavor):
+    print(f"here is your {flavor} ice cream")
 
-get_icecream()
+get_icecream(flavor="vanilla")
