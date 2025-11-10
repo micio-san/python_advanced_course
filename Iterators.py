@@ -3,7 +3,7 @@
 #Iterable	An object you can get an iterator from (like list, tuple, str, dict, etc.)
 #Iterator	The actual object that produces one value at a time when you call next()
 
-nums =[10,3, 22] #this is the iterable
+nums =[10,3, 22] #this is the iterable, anything that is ITERABLE has an iter method on
 it = iter(nums) # turn it into an iterator
 #after the last value is iterated over, next will raise *StopIteration*
 #To BE AN ITERATOR AN OBJECT MUST HAVE TWO METHODS
