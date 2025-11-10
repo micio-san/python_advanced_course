@@ -54,3 +54,20 @@ lines = get_from_file()
 for x in lines:
     print(x)
     print("-----------------------------")
+
+
+def my_gen():
+    print("Step 1")
+    yield 10
+    print("Step 2")
+    yield 20
+    print("Step 3")
+
+g = my_gen()# Creates the generator, but does NOT run it yet
+next(g) #Step1 returns 10
+#run again
+next(g) #Step2
+next(g) #Step3 StopIteration is raised
+#yield Is so Powerful because it let's you pause execution mid-function, remember local state automatically,, resume exactly where you left off.
+
+
