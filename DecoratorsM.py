@@ -1,4 +1,4 @@
-#A decorator is a funcion that extends the behavior of another function without explicitly modifying it.
+#A decorator is a function that extends the behavior of another function without explicitly modifying it.
 #Pass thebase func as argument to the decorator function.
 #@add_spinkles
 #get_icecream("vanilla")
